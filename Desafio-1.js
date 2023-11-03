@@ -55,16 +55,16 @@ class Library {
 
     removeBook = id => {
         const bookIndex = this.booksArray.findIndex(book => book.id === id);
-        
+
         if (bookIndex === -1) {
             return `Book not found in the library.`;
         }
-        
+
         const removedBook = this.booksArray[bookIndex];
         this.booksArray.splice(bookIndex, 1);
-        
+
         return `Successfully removed "${removedBook.title}".`;
-    }    
+    }
 
     updateBook = (id, changes) => {
         const bookIndex = this.booksArray.findIndex(book => book.id === id);
